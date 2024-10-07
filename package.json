@@ -21,7 +21,10 @@
 		"format": "npm run lint:css && npm run check:write",
 		"build": "tsc && vite build",
 		"commit": "cz",
-		"prepare": "husky"
+		"commit:up-pkg": "git add . && git commit -m 'chore: update package.json'",
+		"prepare": "husky",
+		"bump:patch": "npm version patch -m 'bump %s'",
+		"push:main": "git push origin main && git push --tags"
 	},
 	"devDependencies": {
 		"@biomejs/biome": "1.9.3",
