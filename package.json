@@ -23,7 +23,7 @@
 		"commit": "cz",
 		"commit:up-pkg": "git add . && git commit -m 'chore: update package.json'",
 		"prepare": "husky",
-		"bump:patch": "npm version patch -m 'bump %s'",
+		"bump:patch": "npm version patch -m 'bump v%s'",
 		"push:main": "git push origin main && git push --tags"
 	},
 	"devDependencies": {
