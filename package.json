@@ -24,6 +24,7 @@
 		"commit:up-pkg": "git add . && git commit -m 'chore: update package.json'",
 		"commit:up-readme": "git add . && git commit -m 'chore: update README.md'",
 		"prepare": "husky",
+		"bump": "npm run bump:patch && npm run push:main",
 		"bump:patch": "npm version patch -m 'bump v%s'",
 		"push:main": "git push origin main && git push --tags"
 	},
