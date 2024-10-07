@@ -4,13 +4,21 @@
 	"version": "0.0.1",
 	"module": "./dist/index.js",
 	"types": "./dist/index.d.ts",
-  "files": [
-    "dist",
-    "README.md"
-  ],
+	"files": ["dist", "README.md"],
+	"exports": {
+		".": {
+			"import": {
+				"types": "./dist/index.d.ts",
+				"default": "./dist/index.js"
+			}
+		},
+		"./css": "./dist/style.css"
+	},
 	"scripts": {
 		"check": "biome check .",
 		"check:write": "biome check --write .",
+		"lint:css": "stylelint \"**/*.css\" --fix",
+		"format": "npm run lint:css && npm run check:write",
 		"build": "tsc && vite build"
 	},
 	"devDependencies": {
@@ -23,6 +31,8 @@
 		"@vitejs/plugin-react-swc": "^3.7.1",
 		"globals": "^15.9.0",
 		"jsdom": "25.0.1",
+		"stylelint": "16.9.0",
+		"stylelint-config-standard": "36.0.1",
 		"typescript": "5.6.2",
 		"vite": "5.4.8",
 		"vite-plugin-dts": "4.2.3",

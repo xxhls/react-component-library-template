@@ -1,3 +1,4 @@
+import "@tmp/design/css";
 import { Image } from "@tmp/design";
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
