@@ -26,7 +26,10 @@
 		"prepare": "husky",
 		"bump": "npm run bump:patch && npm run push:main",
 		"bump:patch": "npm version patch -m 'bump v%s'",
-		"push:main": "git push origin main && git push --tags"
+		"release:patch": "npm run build && npm run bump && npm publish",
+		"push:main": "git push origin main && git push --tags",
+		"dev:demo": "cd packages/demo && npm run dev",
+		"dev:demo-dist": "npm run build && cp -r ./dist ./packages/demo-dist/src/ && cd packages/demo-dist && npm run dev"
 	},
 	"devDependencies": {
 		"@biomejs/biome": "1.9.3",

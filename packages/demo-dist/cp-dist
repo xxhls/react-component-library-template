@@ -1,7 +1,0 @@
-#!/bin/sh bash
-
-# 项目目录
-project_dir=$HOME/Desktop/开源练习/组件库/template
-
-rm -rf "$project_dir"/packages/demo-dist/src/dist
-cp -r "$project_dir"/dist "$project_dir"/packages/demo-dist/src/dist

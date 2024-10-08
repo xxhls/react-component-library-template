@@ -3,13 +3,14 @@
 ## Scripts
 
 ```bash
+# format the code
+pnpm format
+
 # run demo
-cd packages/demo
-pnpm dev
+pnpm dev:demo
 
 # run demo-dist
-cd packages/demo-dist
-pnpm dev
+pnpm dev:demo-dist
 
 # run build in root
 pnpm build

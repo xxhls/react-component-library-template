@@ -25,7 +25,7 @@ export const Image: React.FC<Partial<IImageProps>> = (props) => {
 	} = props;
 	return (
 		<>
-			<div className="tmp-design--image">
+			<div className="tmp-design-image">
 				Image
 				<span>{src}</span>
 				<span>{width}</span>
