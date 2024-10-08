@@ -22,7 +22,8 @@
 			"recommended": true,
 			"a11y": {
 				"useKeyWithClickEvents": "off",
-				"noSvgWithoutTitle": "off"
+				"noSvgWithoutTitle": "off",
+				"useValidAriaRole": "off"
 			}
 		}
 	},

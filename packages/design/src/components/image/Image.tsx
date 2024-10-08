@@ -1,5 +1,7 @@
 import type { ReactNode } from "react";
 
+export type Func = () => void;
+
 export interface ImageProps {
 	/** src */
 	src: string;
@@ -10,8 +12,10 @@ export interface ImageProps {
 	radius?: string | number;
 	error?: boolean | ReactNode;
 	loading?: boolean | ReactNode;
-	onLoad?: () => void;
-	onError?: () => void;
+	onLoad?: Func;
+	onError?: Func;
+	/** 其他属性 */
+	[propName: string]: string | number | undefined | boolean | ReactNode | Func;
 }
 
 export const Image = ({
