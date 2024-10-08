@@ -4,6 +4,7 @@
 	"rules": {
 		"block-no-empty": true,
 		"color-hex-length": "long",
+		"selector-class-pattern": null,
 		"selector-type-no-unknown": [
 			true,
 			{
